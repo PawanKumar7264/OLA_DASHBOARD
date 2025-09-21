@@ -90,4 +90,7 @@ Analyzing the relationship between driver/customer ratings and cancellation rate
 ### 6.	Screenshots / Demos
 Show what the dashboard looks like. - ![Alt text](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/ola.pbix)
 Example: ![Dashboard Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/Snapshort_%20dashboard%20.png)
-
+ ![Dashboard Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/snapshot_vechicle.png)
+ ![Dashboard Preview]( https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/snapshot_revenu%20(2).png)
+ ![Dashboard Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/cancelation_of_snapshot.png)
+ ![Dashboard Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/snapshot_rating.png)
