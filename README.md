@@ -88,6 +88,6 @@ I can also identify specific locations or times with high cancellation rates to 
 Analyzing the relationship between driver/customer ratings and cancellation rates could reveal opportunities to improve the user experience and reduce churn.
 
 ### 6.	Screenshots / Demos
-Show what the dashboard looks like. - ![Alt text](https://github.com/PawanKumar7264/OLA_DASHBOARD)
+Show what the dashboard looks like. - ![Alt text](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/ola.pbix)
 Example: ![Dashboard Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/Snapshort_%20dashboard%20.png)
 
