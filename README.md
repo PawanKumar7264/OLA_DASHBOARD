@@ -1,96 +1,84 @@
-# OLA_DASHBOARD
-This OLA dashboard provides a comprehensive view of bookings, cancellations, revenues, vehicle types, and ratings for July 2024.
-### 1.	Project Title / Headline
-"Ola Ride Analytics: Performance and Insights (July 2024)"
-Example: 
-This title reflects the comprehensive data analysis of Ola's ride services, including total bookings, successful bookings, cancellations, revenue, vehicle types, ratings, and payment methods, covering the period from July 1 to July 30, 2024. 
+ # Ola Ride Analytics: Performance and Insights (July 2024)
 
-### 2.	Short Description / Purpose
-The purpose of "Ola Ride Analytics: Performance and Insights (July 2024)" is to analyze and visualize key performance metrics, including total bookings, successful bookings, cancellations, revenue, vehicle type distribution, customer and driver ratings, and payment methods, to provide actionable insights for optimizing Ola's ride-sharing services during the specified period. 
+## 1. Project Title / Headline
+**Ola Ride Analytics: Performance and Insights (July 2024)**  
+This dashboard provides a comprehensive analysis of Ola's ride-sharing services for July 2024, covering total bookings, successful rides, cancellations, revenue, vehicle type distribution, customer and driver ratings, and payment methods.
 
-### 3.	Tech Stack
-List the key technologies used to build the dashboard.
-Example:
-The dashboard was built using the following tools and technologies:<br>
-•	📊 Power BI Desktop – Main data visualization platform used for report creation.<br>
-•	📂 Power Query – Data transformation and cleaning layer for reshaping and preparing the data.<br>
-•	🧠 DAX (Data Analysis Expressions) – Used for calculated measures, dynamic visuals, and conditional logic.<br>
-•	📝 Data Modeling – Relationships established among tables  Date_Key, Location_Key, Temperature_Fahrenheit, Temperature_Celsius, Humidity_Percentage, WindSpeed_MPH, Precipitation_Chance_Percentage, AQI (Air Quality Index) to enable cross-filtering and aggregation.<br>
-•	📁 File Format – .pbix for development and .png for dashboard previews.
+## 2. Short Description / Purpose
+The **Ola Ride Analytics Dashboard** aims to deliver actionable insights into Ola's ride-sharing performance for July 2024. By analyzing key metrics such as booking success rates, cancellation patterns, daily ride volume trends, vehicle types, ratings, and payment methods, the dashboard enables stakeholders to identify operational inefficiencies, enhance customer satisfaction, and optimize revenue generation.
 
-### 4.	Data Source<br>
-More info on where the data comes from and how it’s structured.<br>
-Source: Ola’s ride-booking system database for the period July 1–30, 2024.<br>
-Extraction: Pull key insights (like total bookings, cancellations, daily trends) and output JSON formatted for dashboard use.<br>
-Transformation:  <br>
--Read the CSV → Extract booking records (date, status, etc.).<br>
--Aggregate → Calculate totals, successful bookings, cancellations (by driver, by customer, driver not found).<br>
--Trend → Summarize daily ride counts for "Ride Volume Over Time".<br>
--Output → Produce structured dashboard-ready JSON.<br>
+## 3. Tech Stack
+The dashboard leverages the following technologies:  
+- **Power BI Desktop**: Primary platform for data visualization and report creation.  
+- **Power Query**: Used for data transformation and cleaning to prepare data for analysis.  
+- **DAX (Data Analysis Expressions)**: Employed for calculated measures, dynamic visuals, and conditional logic.  
+- **Data Modeling**: Relationships established among tables (e.g., Date_Key, Location_Key, Temperature_Fahrenheit, Temperature_Celsius, Humidity_Percentage, WindSpeed_MPH, Precipitation_Chance_Percentage, AQI) for cross-filtering and aggregation.  
+- **File Formats**: .pbix for development, .png for dashboard previews.
 
-### 5.	Features / Highlights
-1. Automated Data Restructuring
--Raw CSV rows are transformed into structured JSON objects.
--Data is grouped by date and status for easier visualization.
-2.Dashboard-Ready Format
--JSON includes summary totals, status breakdown, and daily ride volume trends.
--Can be directly used in BI tools, web dashboards, or APIs.
-3.Booking Status Classification
--Categories: Success, Canceled by Driver, Canceled by Customer, Driver Not Found.
--Each category shows count and percentage share.
-4.Time-Series Insights
--Rides are aggregated day by day for trend charts.
--Helps track peaks, lows, and cancellation spikes.
-5.Scalable & Flexible
--Works for any time period, not just July 2024.
--Can adapt to new booking statuses or additional metrics (e.g., revenue, distance).
-6.Supports Analytics & Reporting
--Ready JSON can power:<br>
--📊 BI dashboards (Power BI, Tableau)<br>
--📈 Web visualizations (D3.js, Recharts)<br>
--📂 APIs for mobile apps<br>
+## 4. Data Source
+- **Source**: Ola’s ride-booking system database for July 1–30, 2024.  
+- **Extraction**: Key metrics (e.g., total bookings, cancellations, daily trends) extracted and output as JSON for dashboard use.  
+- **Transformation**:  
+  - Read CSV data containing booking records (date, status, etc.).  
+  - Aggregate data to calculate totals, successful bookings, cancellations (by driver, customer, or driver not found).  
+  - Summarize daily ride counts for time-series analysis ("Ride Volume Over Time").  
+  - Output structured, dashboard-ready JSON.  
+
+## 5. Features / Highlights
+### Key Features
+1. **Automated Data Restructuring**  
+   - Transforms raw CSV data into structured JSON objects.  
+   - Groups data by date and status for seamless visualization.  
+2. **Dashboard-Ready Format**  
+   - JSON includes summary totals, status breakdowns, and daily ride volume trends.  
+   - Compatible with BI tools, web dashboards, or APIs.  
+3. **Booking Status Classification**  
+   - Categories: Success, Canceled by Driver, Canceled by Customer, Driver Not Found.  
+   - Displays count and percentage share for each category.  
+4. **Time-Series Insights**  
+   - Aggregates rides daily to visualize trends, peaks, lows, and cancellation spikes.  
+5. **Scalable & Flexible**  
+   - Adaptable to any time period or additional metrics (e.g., revenue, distance).  
+6. **Supports Analytics & Reporting**  
+   - Powers BI dashboards (Power BI, Tableau), web visualizations (D3.js, Recharts), and mobile app APIs.
+
+### Business Problem
+Raw booking data in CSV format lacks actionable insights, hindering Ola’s ability to track success rates, identify cancellation patterns, or monitor demand trends. This leads to inefficiencies in resource allocation, reduced customer satisfaction, and lost revenue opportunities. The dashboard addresses key questions:  
+- What is the total number of bookings?  
+- What are the success and cancellation rates (by driver, customer, or driver not found)?  
+- How do daily booking volumes and cancellations trend?  
+- Are cancellations concentrated around specific dates, times, or customer segments?  
+
+### Goal of the Dashboard
+To provide a comprehensive overview of Ola’s ride-sharing performance for July 2024, enabling stakeholders to:  
+- Monitor key metrics (bookings, success rates, cancellations, daily trends).  
+- Identify operational inefficiencies (e.g., high "Driver Not Found" incidents).  
+- Assess customer and driver behavior.  
+- Support data-driven decisions to improve service reliability, reduce cancellations, and optimize revenue.
+
+### Business Impact & Insights
+1. **Booking Performance**  
+   - Total bookings and success rates calculated using the Booking_Status column.  
+   - Total booking value generated to assess revenue.  
+2. **Ride Dynamics & Customer Behavior**  
+   - Analysis of popular vehicle types (Vehicle_Type).  
+   - Identification of frequent pickup and drop-off locations (Pickup_Location, Drop_Location).  
+   - Insights into customer and driver satisfaction via ratings (Customer_Rating, Driver_Ratings).  
+   - Distribution of payment methods (Payment_Method) to understand preferences.  
+3. **Operational Efficiency**  
+   - Analysis of Vehicle Turnaround Time (V_TAT) and Customer Turnaround Time (C_TAT) to identify bottlenecks.  
+   - Breakdown of cancellation reasons (Canceled_Rides_by_Customer, Canceled_Rides_by_Driver, Incomplete_Rides).  
+4. **Potential Business Impact**  
+   - Estimation of revenue loss from cancellations by comparing successful and canceled ride values.  
+   - Identification of high-cancellation locations or times for targeted improvements.  
+   - Correlation of ratings with cancellations to enhance user experience and reduce churn.
+
+## 6. Screenshots / Demos
+Below are previews of the Ola Ride Analytics Dashboard:  
+- **Main Dashboard**: [Dashboard Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/Snapshort_%20dashboard%20.png)  
+- **Vehicle Type Analysis**: [Vehicle Type Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/snapshot_vechicle.png)  
+- **Revenue Insights**: [Revenue Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/snapshot_revenu%20(2).png)  
+- **Cancellation Breakdown**: [Cancellation Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/cancelation_of_snapshot.png)  
+- **Ratings Overview**: [Ratings Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/snapshot_rating.png)  
+
  
-•Business Problem
-The raw booking data in CSV form does not provide clear, actionable insights. Without structured analysis, Ola cannot effectively track booking success rates, identify high cancellation patterns, or monitor daily demand trends. This lack of visibility leads to inefficiencies in resource allocation, reduced customer satisfaction, and missed opportunities to improve operational performance and revenue.
-
-Key questions such as:<br>
-✅ What is the total number of bookings in the selected time period?<br>
-✅ How many bookings were successful versus canceled (by driver, by customer, or due to no driver found)?<br>
-✅ What is the percentage breakdown of each booking status?<br>
-✅ How do daily booking volumes change over time — where are the peaks and lows?<br>
-✅ Which days show the highest cancellations, and what patterns can be observed?<br>
-✅ How does the success rate trend over the month?<br>
-✅ Are cancellations concentrated around certain dates, times, or customer segments?<br>
-
-•Goal of the Dashboard
-The dashboard aims to provide a comprehensive overview of OLA's ride booking performance for July 2024, enabling stakeholders to monitor key metrics such as total bookings, success rates, cancellation breakdowns by cause, and daily ride volume trends. This facilitates identifying operational inefficiencies (e.g., high "Driver Not Found" incidents), assessing customer and driver behavior, and supporting data-driven decisions to enhance service reliability, reduce cancellations, and optimize revenue generation
-
-•Business Impact & Insights
-  1. Booking Performance:
-I can calculate the total number of bookings in July.
-I can determine the overall success rate of rides by analyzing the Booking_Status column.
-I can calculate the total booking value generated.
-
-2. Ride Dynamics & Customer Behavior:
-I can analyze the most popular vehicle types (Vehicle_Type).
-I can identify the most frequent pickup and drop-off locations (Pickup_Location, Drop_Location).
-I can gain insights into customer ratings (Customer_Rating) and driver ratings (Driver_Ratings) to understand satisfaction levels.
-I can analyze the distribution of different payment methods (Payment_Method) to understand customer preferences.
-
-3. Operational Efficiency:
-I can analyze the V_TAT (Vehicle Turnaround Time) and C_TAT (Customer Turnaround Time) to assess operational efficiency and identify potential bottlenecks.
-I can break down the reasons for cancellations, particularly Canceled_Rides_by_Customer and Canceled_Rides_by_Driver, to understand the primary pain points in the service.
-I can also investigate the number and reasons for Incomplete_Rides.
-
-4. Potential Business Impact:
-By analyzing the booking values of successful rides and comparing them to those that were canceled, I can estimate the potential revenue loss.
-I can also identify specific locations or times with high cancellation rates to pinpoint areas for operational improvement.
-Analyzing the relationship between driver/customer ratings and cancellation rates could reveal opportunities to improve the user experience and reduce churn.
-
-### 6.	Screenshots / Demos
-Show what the dashboard looks like. - ![Alt text](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/ola.pbix)
-Example: ![Dashboard Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/Snapshort_%20dashboard%20.png)<br>
- ![Dashboard Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/snapshot_vechicle.png)<br>
- ![Dashboard Preview]( https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/snapshot_revenu%20(2).png)<br>
- ![Dashboard Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/cancelation_of_snapshot.png)<br>
- ![Dashboard Preview](https://github.com/PawanKumar7264/OLA_DASHBOARD/blob/main/snapshot_rating.png)<br>
